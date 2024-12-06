@@ -1,0 +1,18 @@
+<mvc:View controllerName="project1.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <form:SimpleForm id="bookForm" editable="true" layout="ResponsiveGridLayout">
+                <Label id="_IDGenLabel1" text="Title"/>
+                <Input id="titleInput"/>
+
+                <Label id="_IDGenLabel2" text="Author"/>
+                <Input id="authorInput"/>
+
+                <Label id="_IDGenLabel3" text="Stock"/>
+                <Input id="stockInput" type="Number"/>
+
+            </form:SimpleForm>
+            <Button id="_IDGenButton" text="Submit" press="onSubmit"/>
+        </content>
+    </Page>
+</mvc:View>
