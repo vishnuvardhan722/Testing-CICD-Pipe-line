@@ -21,7 +21,7 @@
   "scripts": {
     "start": "cds-serve",
     "watch-project1": "cds watch --open project1/webapp/index.html?sap-ui-xx-viewCache=false",
-     "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests",
     "deploy": "cds deploy --to sqlite:db/test.db"
   }
 }
