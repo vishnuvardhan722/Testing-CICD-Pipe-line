@@ -27,6 +27,9 @@ jobs:
     - name: Run tests
       run: npm test
 
+    - name: Install @sap/cds-dk
+      run: npm install -g @sap/cds-dk
+
     - name: Deploy to sqlite
       run : cds deploy --to sqlite
 
