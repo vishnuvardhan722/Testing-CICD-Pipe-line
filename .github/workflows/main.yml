@@ -27,6 +27,10 @@ jobs:
     # - name: Run tests
     #   run: npm test
 
+    - name: Install SAP CDS Development Kit
+      run: npm install -g @sap/cds-dk
+
+
     - name: Build Project
       run: cds build
 
