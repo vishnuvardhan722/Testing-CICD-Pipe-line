@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # or the branch you're working on
+      - main
   pull_request:
     branches:
       - main
@@ -27,8 +27,8 @@ jobs:
     - name: Run tests
       run: npm test
 
-    - name: Test Project
-      run: cds build && cds deploy --to sqlite:db/ test.db
+    - name: Build Project
+      run: cds build
 
-    - name: Deploy to environment
-      run: npm run deploy
+    - name: Deploy to SQLite
+      run: npm run deploy --to sqlite:db
