@@ -27,5 +27,8 @@ jobs:
     - name: Run tests
       run: npm test
 
+    - name: Test Project
+      run: cds build && cds deploy --to sqlite:db/ test.db
+
     - name: Deploy to environment
       run: npm run deploy

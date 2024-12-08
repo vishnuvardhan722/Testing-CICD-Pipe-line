@@ -17,11 +17,11 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "/odata/v4/catalog/",
+        "uri": "/v2/odata/v4/catalog/",
         "type": "OData",
         "settings": {
           "annotations": [],
-          "odataVersion": "4.0"
+          "odataVersion": "2.0"
         }
       }
     }
@@ -63,14 +63,11 @@
         }
       },
       "": {
-        "dataSource": "mainService",
-        "preload": true,
+        "type": "sap.ui.model.odata.v2.ODataModel",
         "settings": {
-          "operationMode": "Server",
-          "autoExpandSelect": true,
-          "earlyRequests": true
+            "serviceUrl": "/v2/catalog/"
         }
-      }
+    }
     },
     "resources": {
       "css": [

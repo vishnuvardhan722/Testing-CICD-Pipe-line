@@ -13,6 +13,8 @@
 
             </form:SimpleForm>
             <Button id="_IDGenButton" text="Submit" press="onSubmit"/>
+            
+            <Button id ="retrival" text ="Get the Data" press="onGetData"/>
         </content>
     </Page>
 </mvc:View>
