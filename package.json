@@ -10,7 +10,8 @@
     "@sap/cds": "^8",
     "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
     "@sap/xssec": "^4",
-    "express": "^4"
+    "express": "^4",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.7.0",
@@ -20,6 +21,7 @@
   "scripts": {
     "start": "cds-serve",
     "watch-project1": "cds watch --open project1/webapp/index.html?sap-ui-xx-viewCache=false",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "cds deploy --to sqlite:db/test.db"
   }
 }

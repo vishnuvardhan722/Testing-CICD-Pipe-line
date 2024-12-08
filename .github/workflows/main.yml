@@ -31,4 +31,4 @@ jobs:
       run: cds build
 
     - name: Deploy to SQLite
-      run: npm run deploy --to sqlite:db
+      run: cds deploy --to sqlite:db/test.db
