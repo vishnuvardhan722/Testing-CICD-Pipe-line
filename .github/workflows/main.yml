@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - main  # or the branch you're working on
   pull_request:
     branches:
       - main
@@ -19,20 +19,13 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '18'
+        node-version: '16'
 
     - name: Install dependencies
       run: npm install
 
-    # - name: Run tests
-    #   run: npm test
+    - name: Run tests
+      run: npm test
 
-    - name: Install SAP CDS Development Kit
-      run: npm install -g @sap/cds-dk
-
-
-    - name: Build Project
-      run: cds build
-
-    - name: Deploy to SQLite
-      run: cds deploy --to sqlite:db/test.db
+    - name: Deploy to environment
+      run: npm run deploy
