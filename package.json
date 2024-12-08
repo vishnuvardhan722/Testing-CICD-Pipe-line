@@ -14,11 +14,12 @@
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.7.0",
-    "@cap-js/sqlite": "^1"
+    "@cap-js/sqlite": "^1",
+    "jest": "^29.7.0"
   },
   "scripts": {
     "start": "cds-serve",
     "watch-project1": "cds watch --open project1/webapp/index.html?sap-ui-xx-viewCache=false",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   }
 }
